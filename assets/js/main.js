@@ -4,9 +4,9 @@ document.querySelector("#submitName").addEventListener("click",  (event) => {
     let name =document.querySelector('input[name="name"]').value
     let female = document.querySelector('input[name="gender"][value="female"]')
     let male = document.querySelector('input[name="gender"][value="male"]')
-    let gender = document.querySelector('input[name="gender"]:checked')
     let setprob = document.querySelector('#setprob')
     let setgender = document.querySelector('#setgender')
+    let ourgender = document.querySelector('#ourgender')
 
     if (name.length>256) {
         createNotify("You should enter less than 255 character")
@@ -39,11 +39,28 @@ document.querySelector("#submitName").addEventListener("click",  (event) => {
         // handle the error
         console.log(error);
     });
+
+    let db = JSON.parse(localStorage.getItem("gender"));
+    if (db.hasOwnProperty(name)) {
+        ourgender.innerText = db[name]
+    }else{
+        ourgender.innerText = '-'
+    }
+
 })
 
 const submitSave = (event) => {
     event.preventDefault();
-    createNotify("خطا رخ داده است")
+    let name =document.querySelector('input[name="name"]').value
+    let gender = document.querySelector('input[name="gender"]:checked')
+    
+    if (gender == null) {
+        createNotify("Please select gender!")
+        return 0
+    }
+    let db = JSON.parse(localStorage.getItem("gender"));
+    db[name] = gender.value
+    localStorage.setItem("gender", JSON.stringify(db));
 }
 
 const submitClear = () => {
