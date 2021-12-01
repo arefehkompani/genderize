@@ -15,18 +15,21 @@
                 <h2>Mr. or Ms.?</h2>
                 <div>
                     <label>Name</label>
-                    <input type="text">
+                    <input type="text" name="name">
                 </div>
                 <div>
-                    <input type="radio">
+                    <input type="radio" name="gender" value="male">
                     <label>Male</label>
                 </div>
                 <div>
-                    <input type="radio">
+                    <input type="radio" name="gender" value="female">
                     <label>Female</label>
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit"  onclick="submitName()">Submit</button>
+                </div>
+                <div>
+                    <button type="submit"  onclick="submitSave()">Save</button>
                 </div>
             </div>
             <div>
@@ -41,10 +44,7 @@
                 <div class="saved">
                     <h2>Saved Answer</h2>
                     <div>
-                        <span>Male</span>
-                    </div>
-                    <div>
-                        <button type="submit">Submit</button> 
+                        <button type="submit" onclick="submitClear()">Clear</button> 
                     </div>
                 </div>
             </div>
