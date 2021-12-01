@@ -5,7 +5,11 @@ html, body {
 }
 
 .container {
-    background-color: yellow;
+    background: url(../image/box.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -13,7 +17,8 @@ html, body {
 }
 
 .box {
-    background-color:white;
+    /* آخرین پارامتر شفافیت را تنظیم میکند */
+    background-color: rgba(255, 255, 255, 0.8);
     width: 40%;
     padding: 20px;
     border-radius:10px;
