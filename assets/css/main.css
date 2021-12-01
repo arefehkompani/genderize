@@ -22,6 +22,8 @@ html, body {
     width: 40%;
     padding: 20px;
     border-radius:10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .notify {
@@ -30,4 +32,16 @@ html, body {
     position: fixed;
     bottom: 50px;
     left: 70px;
+}
+
+.saved {
+    border: 2px dotted grey;
+}
+
+.box > div > div {
+    margin-bottom: 25px;
+}
+
+.saved > div {
+    margin-bottom: 10px;
 }
