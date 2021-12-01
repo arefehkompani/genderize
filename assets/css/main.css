@@ -27,8 +27,9 @@ html, body {
 }
 
 .notify {
-    background-color: #f8c957;
-    padding: 20px;
+    background-color: #c2f9f9;
+    border-radius:20px;
+    padding: 12px;
     position: fixed;
     bottom: 50px;
     left: 70px;
@@ -38,7 +39,11 @@ html, body {
     border: 2px dotted grey;
 }
 
-.box > div > div {
+.box > div > div{
+    margin-bottom: 25px;
+}
+
+.box > div > form > div {
     margin-bottom: 25px;
 }
 
