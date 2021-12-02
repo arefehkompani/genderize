@@ -1,9 +1,15 @@
+/* تمام صفحه کردن */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
+/* این قسمت، عکس پس زمینه قرار میگیرد که قرار است در آن
+ما یک باکس بگذاریم که فرم‌های ما در آن قرار دارد. چون میخواهیم
+تمام صفحه باشد، پس باید اندازه پس زمینه را 100% کنیم. آیتم‌هایی که در آن
+قرار میگیرد هم center قرار دادیم.
+*/
 .container {
     background: url(../image/box.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -16,6 +22,9 @@ html, body {
 	align-items: center;
 }
 
+/* باکسی هست که فرم ما در آن قرار میگیرد. و ارتفاع آن با توجه به
+متنی که داخلش قرار میگیرد، متناسب میشود. به دلیل flex
+*/
 .box {
     /* آخرین پارامتر شفافیت را تنظیم میکند */
     background-color: rgba(255, 255, 255, 0.8);
@@ -26,6 +35,9 @@ html, body {
     justify-content: space-around;
 }
 
+/* 
+این قسمت برای آلارم دادن طراحی شده است که سمت چپ پایین صفحه، مواقع مورد نیاز به نمایش در خواهد آمد.
+*/
 .notify {
     background-color: #c2f9f9;
     border-radius:20px;
@@ -35,10 +47,16 @@ html, body {
     left: 70px;
 }
 
+/* 
+بردری که دور قسمت جوابهای ذخیره شده است را مشخص میکند.
+*/
 .saved {
     border: 2px dotted grey;
 }
 
+/* 
+سه تا بلاک بعدی برای تنظیم فاصله میان المنت های بکار گرفته شده میباشد.
+*/
 .box > div > div{
     margin-bottom: 25px;
 }
